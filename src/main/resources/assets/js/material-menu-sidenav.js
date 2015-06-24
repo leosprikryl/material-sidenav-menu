@@ -127,9 +127,3 @@ ngMaterialMenu.directive('mdMenuSidenavSubitem', function () {
         }
     }
 });
-
-ngMaterialMenu.directive('mdDivider', function () {
-    return {
-        template: "<div style='height:1px;'></div>"
-    }
-});
