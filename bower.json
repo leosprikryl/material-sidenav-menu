@@ -7,8 +7,8 @@
   ],
   "description": "Menu collapse for Angular-Material",
   "main": [
-    "assets/js/material-menu-sidenav.min.js",
-    "assets/css/material-menu-sidenav.min.css"
+    "material-menu-sidenav.min.js",
+    "material-menu-sidenav.min.css"
   ],
   "moduleType": [
     "globals"
