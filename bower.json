@@ -35,7 +35,6 @@
   "dependencies": {
     "angular-material": "master",
     "angular-route": "~1.4.1",
-    "fontawesome": "~4.3.0"
   },
   "repository": {
     "type": "git",
