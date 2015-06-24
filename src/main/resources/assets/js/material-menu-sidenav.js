@@ -13,8 +13,10 @@ ngMaterialMenu.factory('serviceContent', function () {
         },
         hideAll: function () {
             for (var i = 0; i < list.length; i++) {
-                list[i].show(false);
-                list[i].state = false;
+                if (list[i].state == true) {
+                    list[i].show(false);
+                    list[i].state = false;
+                }
             }
         },
         generateID: function () {
@@ -84,9 +86,9 @@ ngMaterialMenu.directive('mdMenuSidenavContent', function (serviceContent) {
         link: function ($scope, element, attr) {
             var show = function (v) {
                 if (!v) {
-                    element.css("max-height", '0');
+                    element.css("max-height", '0px');
                 } else {
-                    element.css("max-height", '');
+                    element.css("max-height", element[0].scrollHeight + 'px');
                 }
             };
 
