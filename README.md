@@ -2,6 +2,16 @@
 
 Angular Material Sidenav Menu
 
+[Material Design](https://www.google.com/design/spec/material-design/) is a specification for a
+unified system of visual, motion, and interaction design that adapts across different devices. Our
+goal is to deliver a lean, lightweight set of AngularJS-native UI elements that implement the
+material design specification for use in Angular single-page applications (SPAs).
+
+[Angular-Material](https://github.com/angular/material)
+
+Visit [Angular-Material](https://github.com/angular/bower-material/blob/master/README.md) for more
+details on how to install and use the Angular Material distribution files within your own local
+project.
 
 #### Bower
 
