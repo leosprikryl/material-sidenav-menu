@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="ServiceApp">
+<html ng-app="App">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Service Status</title>
+    <title>NG Sidenav Menu</title>
     <meta name="viewport" content="initial-scale=1"/>
     <link rel="stylesheet" href="/bower_components/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/service.css">
-
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/material-menu-sidenav.css">
 </head>
 
-<body layout="column" ng-controller="ServiceCtrl">
+<body layout="column" ng-controller="AppCtrl">
 
 <md-toolbar layout="row">
     <div class="md-toolbar-tools">
@@ -27,8 +27,80 @@
 </md-toolbar>
 
 <div layout="row" flex>
-    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
+                md-is-locked-open="$mdMedia('gt-md')">
 
+        <md-menu-sidenav>
+            <md-menu-sidenav-item>
+                <md-menu-sidenav-title>
+                    <md-toogle-menu layout="row" flex>
+                        <md-icon flex="15">face</md-icon>
+                        <h1 class="md-body-2" flex>Mapa</h1>
+                    </md-toogle-menu>
+
+                    <md-icon flex="15">pause</md-icon>
+                </md-menu-sidenav-title>
+
+                <md-menu-sidenav-content>
+                    <md-menu-sidenav-subitem ng-click="ola()">Item 1</md-menu-sidenav-subitem>
+                    <md-menu-sidenav-subitem>Item 2</md-menu-sidenav-subitem>
+                    <md-menu-sidenav-subitem>Item 3</md-menu-sidenav-subitem>
+                </md-menu-sidenav-content>
+            </md-menu-sidenav-item>
+
+            <md-menu-sidenav-item>
+                <md-menu-sidenav-title>
+                    <md-toogle-menu layout="row" flex>
+                        <md-icon flex="15">face</md-icon>
+                        <h1 class="md-body-2" flex>Mapa</h1>
+                        <md-icon flex="15">pause</md-icon>
+                    </md-toogle-menu>
+
+                </md-menu-sidenav-title>
+
+                <md-menu-sidenav-content>
+                    <md-menu-sidenav-subitem ng-click="ola()">Item 1</md-menu-sidenav-subitem>
+                    <md-menu-sidenav-subitem>Item 2</md-menu-sidenav-subitem>
+                    <md-menu-sidenav-subitem>Item 3</md-menu-sidenav-subitem>
+                </md-menu-sidenav-content>
+            </md-menu-sidenav-item>
+
+            <md-menu-sidenav-item>
+                <md-menu-sidenav-title>
+                    <md-toogle-menu layout="row" flex>
+                        <md-icon flex="15">face</md-icon>
+                        <h1 class="md-body-2" flex>Mapa</h1>
+                    </md-toogle-menu>
+
+                </md-menu-sidenav-title>
+
+                <md-menu-sidenav-content>
+                    <md-menu-sidenav-subitem ng-click="ola()">Item 1</md-menu-sidenav-subitem>
+                    <md-menu-sidenav-subitem>Item 2</md-menu-sidenav-subitem>
+                    <md-menu-sidenav-subitem>Item 3</md-menu-sidenav-subitem>
+                </md-menu-sidenav-content>
+            </md-menu-sidenav-item>
+
+            <!--<md-menu-sidenav-item title="FontAw 26px" start-fa-icon="fa-lg fa-map-marker">Start Icon-->
+            <!--</md-menu-sidenav-item>-->
+            <!--<md-menu-sidenav-item title="FontAw 26px" end-fa-icon="fa-lg fa-map-marker">End Icon-->
+            <!--</md-menu-sidenav-item>-->
+            <!--<md-menu-sidenav-item title="FontAw 26px" start-fa-icon="fa-lg fa-map-marker"-->
+            <!--end-fa-icon="fa-lg fa-map-marker">Start and End Icon-->
+            <!--</md-menu-sidenav-item>-->
+            <!---->
+            <!--<md-divider></md-divider>-->
+            <!--<md-menu-sidenav-item title="Mapa">Material Icon-->
+            <!--<md-menu-sidenav-subitem></md-menu-sidenav-subitem>-->
+            <!--</md-menu-sidenav-item>-->
+            <!--<md-menu-sidenav-item start-mi-icon="face">Material Icon Start Icon</md-menu-sidenav-item>-->
+            <!--<md-menu-sidenav-item end-mi-icon="pause">Material icon End Icon</md-menu-sidenav-item>-->
+            <!--<md-menu-sidenav-item start-mi-icon="face" end-mi-icon="pause">Material Icon Start and End-->
+            <!--Icon-->
+            <!--</md-menu-sidenav-item>-->
+
+            <md-divider></md-divider>
+        </md-menu-sidenav>
     </md-sidenav>
 
     <div layout="column" flex id="content">
@@ -38,12 +110,12 @@
     </div>
 </div>
 
-
 <script src="/bower_components/angular/angular.min.js"></script>
 <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="/bower_components/angular-route/angular-route.min.js"></script>
 <script src="/bower_components/angular-material/angular-material.min.js"></script>
+<script src="/assets/js/material-menu-sidenav.js"></script>
 <script src="/assets/js/app.js"></script>
 </body>
 </html>
