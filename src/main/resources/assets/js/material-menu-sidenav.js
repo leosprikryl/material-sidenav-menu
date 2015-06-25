@@ -33,7 +33,7 @@ ngMaterialMenu.factory('serviceContent', function () {
     };
 });
 
-ngMaterialMenu.directive('mdMenuSidenav', function (serviceContent) {
+ngMaterialMenu.directive('mdMenuSidenav', ['serviceContent', function (serviceContent) {
     return {
         transclude: true,
         link: function () {
@@ -41,9 +41,9 @@ ngMaterialMenu.directive('mdMenuSidenav', function (serviceContent) {
         },
         template: "<div flex layout='row'><div flex ng-transclude=''></div></div>"
     };
-});
+}]);
 
-ngMaterialMenu.directive('mdToogleMenu', function (serviceContent) {
+ngMaterialMenu.directive('mdToogleMenu', ['serviceContent', function (serviceContent) {
     return {
         link: function (scope, element) {
             var id = serviceContent.generateID();
@@ -65,9 +65,9 @@ ngMaterialMenu.directive('mdToogleMenu', function (serviceContent) {
             })
         }
     }
-});
+}]);
 
-ngMaterialMenu.directive('mdMenuSidenavItem', function () {
+ngMaterialMenu.directive('mdMenuSidenavItem', [function () {
     return {
         transclude: true,
         link: function ($scope, element, attr) {
@@ -78,9 +78,9 @@ ngMaterialMenu.directive('mdMenuSidenavItem', function () {
             return template;
         }
     }
-});
+}]);
 
-ngMaterialMenu.directive('mdMenuSidenavContent', function (serviceContent) {
+ngMaterialMenu.directive('mdMenuSidenavContent', ['serviceContent', function (serviceContent) {
     return {
         transclude: true,
         link: function ($scope, element, attr) {
@@ -100,7 +100,7 @@ ngMaterialMenu.directive('mdMenuSidenavContent', function (serviceContent) {
             return "<div layout='column' ng-transclude></div>"
         }
     }
-});
+}]);
 
 ngMaterialMenu.directive('mdMenuSidenavTitle', function () {
     return {
