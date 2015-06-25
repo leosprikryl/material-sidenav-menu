@@ -13,7 +13,12 @@ md-menu-sidenav-item .icon {
     color: #616161;
 }
 
+md-menu-sidenav-item a {
+    text-decoration: none;
+}
+
 md-menu-sidenav-subitem {
+    cursor: pointer;
     font-size: 14px;
     color: #414141;
     padding: 10px 1px 10px 1px;
